@@ -608,12 +608,19 @@ body {
 	left: -330px;
 	width: 290px;
 	text-align: right;
+	transform: translate(-300%);
+	transition: transform 0.8s;
 }
 #about .about li.second p,
 #about .about li.fourth p {
 	left: 210px;
 	width: 290px;
 	text-align: left;
+	transform: translate(300%);
+	transition: transform 0.8s;
+}
+#about.active .about li p {
+	transform: translate(0);
 }
 #about .about li.fifth::after {
 	display: none;
