@@ -256,6 +256,13 @@ body {
 }
 #services .title {
 	text-align: center;
+	transform: translateY(-100PX);
+	transition: transform 0.3s;
+	opacity: 0;
+}
+#services.active .title {
+	transform: translateY(0);
+	opacity: 1;
 }
 #services .title h2 {
 	line-height: 50px;
@@ -289,6 +296,22 @@ body {
 	margin-right: 35px;
 	width: calc((100% - 70px)/3); /* 리사이즈 했을때 같이 줄여지기 위해서 */
 	box-sizing: border-box;
+	transform: translateY(150px);
+	transition: opacity 0.3s, transform 0.4s;
+	opacity: 0;
+}
+#services.active .services li {
+	transform: translateY(0);
+	opacity: 1;
+}
+#services .services li:nth-child(1){
+		transition-delay: 0.5s;
+}
+#services .services li:nth-child(2){
+		transition-delay: 1s;
+}
+#services .services li:nth-child(3){
+		transition-delay: 1.5s;
 }
 #services .services li:nth-child(3n) {
 	margin-right: 0;
@@ -352,6 +375,13 @@ body {
 }
 #portfolio .title {
 	text-align: center;
+	transform: translateY(-150px);
+	opacity: 0;
+	transition: opacity 0.3s, transform 0.3s;
+}
+#portfolio.active .title {
+	transform: translateY(0);
+	opacity: 1;
 }
 #portfolio .title h2 {
 	line-height: 50px;
@@ -385,6 +415,21 @@ body {
 	margin-bottom: 49px;
 	width: calc((100% - 70px)/3);
 	box-sizing: border-box;
+	transition: transform 0.8s;
+}
+
+#portfolio .portfolio li:nth-child(1),
+#portfolio .portfolio li:nth-child(2),
+#portfolio .portfolio li:nth-child(3) {
+	transform: translate(-500%);
+}
+#portfolio .portfolio li:nth-child(4),
+#portfolio .portfolio li:nth-child(5),
+#portfolio .portfolio li:nth-child(6) {
+	transform: translate(500%);
+}
+#portfolio.active .portfolio li {
+	transform: translate(0);
 }
 #portfolio .portfolio li .picture_img {
 	overflow: hidden;
@@ -485,7 +530,15 @@ body {
 }
 #about .title {
 	text-align: center;
+	transform: translateY(-150px);
+	opacity: 0;
+	transition: transform 0.3s;
 }
+#about.active .title {
+	transform: translateY(0);
+	opacity: 1;
+}
+
 #about .title h2 {
 	line-height: 50px;
 	text-transform: uppercase;
@@ -630,6 +683,13 @@ body {
 }
 #team .title {
 	text-align: center;
+	transform: translateY(-100px);
+	opacity: 0;
+	transition: transform 0.3s;
+}
+#team.active .title {
+	transform: translateY(0);
+	opacity: 1;
 }
 #team .title h2 {
 	line-height: 50px;
@@ -786,6 +846,13 @@ body {
 }
 #contact .title {
 	text-align: center;
+	transform: translateY(-100px);
+	opacity: 0;
+	transition: transform 0.3s;
+}
+#contact.active .title {
+	transform: translateY(0);
+	opacity: 1;
 }
 #contact .title h2 {
 	font-size: 2.4em;
